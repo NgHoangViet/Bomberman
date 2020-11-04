@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -37,6 +40,13 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.1\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1jmkuSQaysRVdg9SllVgwNVDaIk" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -46,9 +56,10 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -97,6 +108,32 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.carlosflorencio.bomberman.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Bomberman" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="bomberman.Bomberman" />
+      <module name="bomberman" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bomberman.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Bomberman" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="main.java.bomberman.Bomberman" />
+      <module name="bomberman" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.java.bomberman.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -200,6 +237,8 @@
         <item itemvalue="Application.Bomberman" />
         <item itemvalue="Application.Bomberman" />
         <item itemvalue="Application.Bomberman" />
+        <item itemvalue="Application.Bomberman" />
+        <item itemvalue="Application.Bomberman" />
       </list>
     </recent_temporary>
   </component>
@@ -234,58 +273,70 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="219" y="29" width="1097" height="795" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604419658422">
+    <state x="219" y="0" width="1097" height="824" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604510346061">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="219" y="29" width="1097" height="795" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1604419658422" />
+    <state x="219" y="0" width="1097" height="824" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1604510346061" />
+    <state x="487" y="195" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604507751566">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="487" y="195" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1604507751566" />
+    <state x="426" y="26" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1604508452022">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="426" y="26" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1536.824@0.0.1536.824" timestamp="1604508452022" />
     <state x="496" y="61" key="FileChooserDialogImpl" timestamp="1604417271969">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="496" y="61" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1604417271969" />
-    <state width="1481" height="245" key="GridCell.Tab.0.bottom" timestamp="1604419637584">
+    <state width="1481" height="195" key="GridCell.Tab.0.bottom" timestamp="1604510305065">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1481" height="245" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1604419637584" />
-    <state width="1481" height="245" key="GridCell.Tab.0.center" timestamp="1604419637584">
+    <state width="1481" height="195" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1604510305065" />
+    <state width="1481" height="195" key="GridCell.Tab.0.center" timestamp="1604510305065">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1481" height="245" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1604419637584" />
-    <state width="1481" height="245" key="GridCell.Tab.0.left" timestamp="1604419637584">
+    <state width="1481" height="195" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1604510305065" />
+    <state width="1481" height="195" key="GridCell.Tab.0.left" timestamp="1604510305065">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1481" height="245" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1604419637584" />
-    <state width="1481" height="245" key="GridCell.Tab.0.right" timestamp="1604419637584">
+    <state width="1481" height="195" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1604510305065" />
+    <state width="1481" height="195" key="GridCell.Tab.0.right" timestamp="1604510305065">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1481" height="245" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1604419637584" />
-    <state width="1481" height="245" key="GridCell.Tab.1.bottom" timestamp="1604419637584">
+    <state width="1481" height="195" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1604510305065" />
+    <state width="1481" height="245" key="GridCell.Tab.1.bottom" timestamp="1604420257044">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1481" height="245" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1604419637584" />
-    <state width="1481" height="245" key="GridCell.Tab.1.center" timestamp="1604419637584">
+    <state width="1481" height="245" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1604420257044" />
+    <state width="1481" height="245" key="GridCell.Tab.1.center" timestamp="1604420257044">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1481" height="245" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1604419637584" />
-    <state width="1481" height="245" key="GridCell.Tab.1.left" timestamp="1604419637584">
+    <state width="1481" height="245" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1604420257044" />
+    <state width="1481" height="245" key="GridCell.Tab.1.left" timestamp="1604420257044">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1481" height="245" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1604419637584" />
-    <state width="1481" height="245" key="GridCell.Tab.1.right" timestamp="1604419637584">
+    <state width="1481" height="245" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1604420257044" />
+    <state width="1481" height="245" key="GridCell.Tab.1.right" timestamp="1604420257044">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1481" height="245" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1604419637584" />
+    <state width="1481" height="245" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1604420257044" />
+    <state x="183" y="0" key="Maven.ArtifactSearchDialog" timestamp="1604509336020">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="183" y="0" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1604509336020" />
     <state x="371" y="117" key="NewModule_or_Project.wizard" timestamp="1604417225550">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="371" y="117" key="NewModule_or_Project.wizard/0.0.1536.824@0.0.1536.824" timestamp="1604417225550" />
-    <state x="121" y="0" key="SettingsEditor" timestamp="1604416916081">
+    <state x="121" y="0" key="SettingsEditor" timestamp="1604508620292">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="121" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1604416916081" />
-    <state x="0" y="0" width="709" height="824" key="find.popup" timestamp="1604418683893">
+    <state x="121" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1604508620292" />
+    <state x="0" y="0" width="709" height="824" key="find.popup" timestamp="1604510277897">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="0" y="0" width="709" height="824" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1604418683893" />
+    <state x="0" y="0" width="709" height="824" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1604510277897" />
     <state x="333" y="0" key="new project wizard" timestamp="1604417281865">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
