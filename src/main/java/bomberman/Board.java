@@ -60,7 +60,7 @@ public class Board implements IRender {
 		updateMobs();
 		updateBombs();
 		updateMessages();
-		detectEndGame();
+		detectTimeOut();
 		
 		for (int i = 0; i < _mobs.size(); i++) {
 			Mob a = _mobs.get(i);
@@ -161,9 +161,10 @@ public class Board implements IRender {
 	| Detections
 	|--------------------------------------------------------------------------
 	 */
-	protected void detectEndGame() {
-		if(_time <= 0)
+	protected void detectTimeOut() {
+		if(_time <= 0) {
 			restartLevel();
+		}
 	}
 	
 	public void endGame() {

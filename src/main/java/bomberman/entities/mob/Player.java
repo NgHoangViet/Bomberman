@@ -90,7 +90,7 @@ public class Player extends Mob {
 			placeBomb(xt,yt);
 			Game.addBombRate(-1);
 			
-			_timeBetweenPutBombs = 30;
+			_timeBetweenPutBombs = 10;
 		}
 	}
 	
@@ -120,28 +120,28 @@ public class Player extends Mob {
 	 */
 	@Override
 	public void kill() {
-		if(!_alive) return;
-		
-		_alive = false;
-		
-		_board.addLives(-1);
-
-		Message msg = new Message("-1 LIVE", getXMessage(), getYMessage(), 2, Color.white, 14);
-		_board.addMessage(msg);
+//		if(!_alive) return;
+//
+//		_alive = false;
+//
+//		_board.addLives(-1);
+//
+//		Message msg = new Message("-1 LIVE", getXMessage(), getYMessage(), 2, Color.white, 14);
+//		_board.addMessage(msg);
 	}
 	
 	@Override
 	protected void afterKill() {
-		if(_timeAfter > 0) --_timeAfter;
-		else {
-			if(_bombs.size() == 0) {
-				
-				if(_board.getLives() == 0)
-					_board.endGame();
-				else
-					_board.restartLevel();
-			}
-		}
+//		if(_timeAfter > 0) --_timeAfter;
+//		else {
+//			if(_bombs.size() == 0) {
+//
+//				if(_board.getLives() == 0)
+//					_board.endGame();
+//				else
+//					_board.restartLevel();
+//			}
+//		}
 	}
 	
 	/*
@@ -168,7 +168,7 @@ public class Player extends Mob {
 	
 	@Override
 	public boolean canMove(double x, double y) {
-		for (int c = 0; c < 4; c++) { //colision detection for each corner of the player
+		for (int c = 0; c < 4; c++) { //collision detection for each corner of the player
 			double xt = ((_x + x) + c % 2 * 11) / Game.TILES_SIZE; //divide with tiles size to pass to tile coordinate
 			double yt = ((_y + y) + c / 2 * 12 - 13) / Game.TILES_SIZE; //these values are the best from multiple tests
 			
@@ -203,12 +203,12 @@ public class Player extends Mob {
 			kill();
 			return false;
 		}
-		
+
 		if(e instanceof Enemy) {
 			kill();
 			return true;
 		}
-		
+
 		return true;
 	}
 	

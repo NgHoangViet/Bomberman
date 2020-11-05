@@ -17,18 +17,12 @@ public class Help extends JMenu {
 
 	public Help(Frame frame)  {
 		super("Help");
-		
-		/*
-		 * How to play
-		 */
+
 		JMenuItem instructions = new JMenuItem("How to play");
 		instructions.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_H, ActionEvent.CTRL_MASK));
 		instructions.addActionListener(new MenuActionListener(frame));
 		add(instructions);
-		
-		/*
-		 * Credits
-		 */
+
 		JMenuItem about = new JMenuItem("About");
 		about.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_A, ActionEvent.CTRL_MASK));
 		about.addActionListener(new MenuActionListener(frame));
@@ -50,7 +44,7 @@ public class Help extends JMenu {
 			  }
 				  
 			  if(e.getActionCommand().equals("About")) {
-				  new InfoDialog(_frame, "About", "Version: " + Game.VERSION + "\n Author: Carlos Flor�ncio\n Website: www.company.com", JOptionPane.INFORMATION_MESSAGE);
+				  new InfoDialog(_frame, "About", "Bomberman", JOptionPane.INFORMATION_MESSAGE);
 			  }
 			  
 		  }
