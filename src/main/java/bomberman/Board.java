@@ -120,7 +120,7 @@ public class Board implements IRender {
 		changeLevel(_level.getLevel() + 1);
 	}
 	
-	public void changeLevel(int level) {
+	public void changeLevel(int level) throws NullPointerException {
 		_time = Game.TIME;
 		_screenToShow = 2;
 		_game.resetScreenDelay();
@@ -134,8 +134,8 @@ public class Board implements IRender {
 			_entities = new Entity[_level.getHeight() * _level.getWidth()];
 			
 			_level.createEntities();
-		} catch (LoadLevelException e) {
-			endGame(); //failed to load.. so.. no more levels?
+		} catch (NullPointerException | LoadLevelException e) {
+			endGame();
 		}
 	}
 	
@@ -179,7 +179,6 @@ public class Board implements IRender {
 			if(_mobs.get(i) instanceof Player == false)
 				++total;
 		}
-		
 		return total == 0;
 	}
 	
@@ -190,8 +189,9 @@ public class Board implements IRender {
 	 */
 	public void gamePause() {
 		_game.resetScreenDelay();
-		if(_screenToShow <= 0)
+		if(_screenToShow <= 0) {
 			_screenToShow = 3;
+		}
 		_game.pause();
 	}
 	

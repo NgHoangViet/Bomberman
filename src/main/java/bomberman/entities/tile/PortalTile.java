@@ -19,9 +19,10 @@ public class PortalTile extends Tile {
 		
 		if(e instanceof Player ) {
 			
-			if(_board.detectNoEnemies() == false)
+			if(_board.detectNoEnemies() == false) {
 				return false;
-			
+			}
+
 			if(e.getXTile() == getX() && e.getYTile() == getY()) {
 				if(_board.detectNoEnemies())
 					_board.nextLevel();
