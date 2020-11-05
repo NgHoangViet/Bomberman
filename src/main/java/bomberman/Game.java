@@ -18,18 +18,16 @@ public class Game extends Canvas {
 	| Options & Configs
 	|--------------------------------------------------------------------------
 	 */
-	public static final double VERSION = 1.9;
-	
 	public static final int TILES_SIZE = 16,
 							WIDTH = TILES_SIZE * (int)(31 / 2), //minus one to ajust the window,
 							HEIGHT = 13 * TILES_SIZE;
 
 	public static int SCALE = 3;
 	
-	public static final String TITLE = "Bomberman " + VERSION;
+	public static final String TITLE = "Bomberman ";
 	
 	//initial configs
-	private static final int BOMBRATE = 2;
+	private static final int BOMBRATE = 8;
 	private static final int BOMBRADIUS = 2;
 	private static final double PLAYERSPEED = 1.5;
 	

@@ -9,12 +9,12 @@ public abstract class Level implements ILevel {
 	protected String[] _lineTiles;
 	protected Board _board;
 
-	protected static String[] codes = { //TODO: change this code system to actualy load the code from each level.txt
-		"dnibpb5uqy",
-		"cuq0vaxstb",
-		"38y418wriq",
-		"34h8k0chcs",
-		"9qztxh6l4s",
+	protected static String[] codes = { //TODO: change this code system to actually load the code from each level.txt
+		"lv1",
+		"lv2",
+		"lv3",
+		"lv4",
+		"lv5",
 		};
 
 	public Level(String path, Board board) throws LoadLevelException {
