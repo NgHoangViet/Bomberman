@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="ChangeListManager">
@@ -265,11 +251,41 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:C:/Users/ACER/Documents/GitHub/Bomberman/src" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State />
           </value>
         </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="1" value="TOOL_WINDOW" />
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
@@ -299,22 +315,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="496" y="61" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1604417271969" />
-    <state width="1481" height="195" key="GridCell.Tab.0.bottom" timestamp="1604591870517">
+    <state width="1481" height="195" key="GridCell.Tab.0.bottom" timestamp="1604595500109">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1481" height="195" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1604591870517" />
-    <state width="1481" height="195" key="GridCell.Tab.0.center" timestamp="1604591870517">
+    <state width="1481" height="195" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1604595500109" />
+    <state width="1481" height="195" key="GridCell.Tab.0.center" timestamp="1604595500109">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1481" height="195" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1604591870517" />
-    <state width="1481" height="195" key="GridCell.Tab.0.left" timestamp="1604591870517">
+    <state width="1481" height="195" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1604595500109" />
+    <state width="1481" height="195" key="GridCell.Tab.0.left" timestamp="1604595500109">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1481" height="195" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1604591870517" />
-    <state width="1481" height="195" key="GridCell.Tab.0.right" timestamp="1604591870517">
+    <state width="1481" height="195" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1604595500109" />
+    <state width="1481" height="195" key="GridCell.Tab.0.right" timestamp="1604595500109">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1481" height="195" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1604591870517" />
+    <state width="1481" height="195" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1604595500109" />
     <state width="1481" height="245" key="GridCell.Tab.1.bottom" timestamp="1604588034030">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -343,18 +359,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="121" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1604508620292" />
-    <state x="546" y="307" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604510474259">
+    <state x="546" y="307" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604592408707">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="546" y="307" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1604510474259" />
-    <state x="212" y="63" width="1112" height="761" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1604590941408">
+    <state x="546" y="307" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1604592408707" />
+    <state x="212" y="63" width="1112" height="761" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1604594762155">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="212" y="63" width="1112" height="761" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1604590941408" />
-    <state x="0" y="0" width="709" height="824" key="find.popup" timestamp="1604591177664">
+    <state x="212" y="63" width="1112" height="761" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1604594762155" />
+    <state x="0" y="0" width="709" height="824" key="find.popup" timestamp="1604594287851">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="0" y="0" width="709" height="824" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1604591177664" />
+    <state x="0" y="0" width="709" height="824" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1604594287851" />
     <state x="333" y="0" key="new project wizard" timestamp="1604417281865">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -363,7 +379,7 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
+        <breakpoint type="java-exception">
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>

@@ -28,7 +28,7 @@ public class Game extends Canvas {
 	
 	//initial configs
 	private static final int BOMBRATE = 8;
-	private static final int BOMBRADIUS = 2;
+	private static final int BOMBRADIUS = 8;
 	private static final double PLAYERSPEED = 1.5;
 	
 	public static final int TIME = 999;
@@ -142,7 +142,6 @@ public class Game extends Canvas {
 					_board.setShow(-1);
 					_paused = false;
 				}
-					
 				renderScreen();
 			} else {
 				renderGame();
