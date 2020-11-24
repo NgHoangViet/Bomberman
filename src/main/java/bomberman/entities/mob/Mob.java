@@ -34,11 +34,11 @@ public abstract class Mob extends AnimatedEntitiy {
 	protected abstract void afterKill();
 	
 	protected abstract boolean canMove(double x, double y);
-	
+
 	public boolean isAlive() {
 		return _alive;
 	}
-	
+
 	public boolean isMoving() {
 		return _moving;
 	}

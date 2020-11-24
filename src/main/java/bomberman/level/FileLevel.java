@@ -118,10 +118,7 @@ public class FileLevel extends Level {
 						new PortalTile(x ,y, _board, Sprite.portal), 
 						new BrickTile(x ,y, Sprite.brick)) );
 				break;
-			case ' ': 
-				_board.addEntitie(pos, new GrassTile(x, y, Sprite.grass) );
-				break;
-			case 'p': 
+			case 'p':
 				_board.addMob( new Player(Coordinates.tileToPixel(x), Coordinates.tileToPixel(y) + Game.TILES_SIZE, _board) );
 				Screen.setOffset(0, 0);
 				
