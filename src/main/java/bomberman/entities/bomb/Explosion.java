@@ -71,6 +71,4 @@ public class Explosion extends Entity {
 		
 		return true;
 	}
-	
-
 }

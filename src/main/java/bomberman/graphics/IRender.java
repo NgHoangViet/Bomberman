@@ -2,7 +2,7 @@ package main.java.bomberman.graphics;
 
 public interface IRender {
 
-	public void update();
+	void update();
 	
-	public void render(Screen screen);
+	void render(Screen screen);
 }

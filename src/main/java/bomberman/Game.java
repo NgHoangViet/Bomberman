@@ -13,11 +13,7 @@ import main.java.bomberman.input.Keyboard;
 
 public class Game extends Canvas {
 	
-	/*
-	|--------------------------------------------------------------------------
-	| Options & Configs
-	|--------------------------------------------------------------------------
-	 */
+	//Khung giao diện
 	public static final int TILES_SIZE = 16,
 							WIDTH = TILES_SIZE * (int)(31 / 2), //minus one to ajust the window,
 							HEIGHT = 13 * TILES_SIZE;
@@ -26,7 +22,7 @@ public class Game extends Canvas {
 	
 	public static final String TITLE = "Bomberman ";
 	
-	//initial configs
+	//Chỉ số hằng
 	private static final int BOMBRATE = 8;
 	private static final int BOMBRADIUS = 8;
 	private static final double PLAYERSPEED = 1.5;
@@ -38,13 +34,11 @@ public class Game extends Canvas {
 	protected static int SCREENDELAY = 2;
 	
 	
-	//can be modified with bonus
+	//Chỉ số biến
 	protected static int bombRate = BOMBRATE;
 	protected static int bombRadius = BOMBRADIUS;
 	protected static double playerSpeed = PLAYERSPEED;
-	
-	
-	//Time in the level screen in seconds
+
 	protected int _screenDelay = SCREENDELAY;
 	
 	private Keyboard _input;
@@ -55,7 +49,7 @@ public class Game extends Canvas {
 	private Screen screen;
 	private Frame _frame;
 	
-	//this will be used to render the game, each render is a calculated image saved here
+	//render
 	private BufferedImage image = new BufferedImage(WIDTH, HEIGHT, BufferedImage.TYPE_INT_RGB);
 	private int[] pixels = ((DataBufferInt)image.getRaster().getDataBuffer()).getData();
 	
@@ -71,31 +65,7 @@ public class Game extends Canvas {
 	}
 	
 	
-	private void renderGame() { //render will run the maximum times it can per second
-		BufferStrategy bs = getBufferStrategy(); //create a buffer to store images using canvas
-		if(bs == null) { //if canvas dont have a bufferstrategy, create it
-			createBufferStrategy(3); //triple buffer
-			return;
-		}
-		
-		screen.clear();
-		
-		_board.render(screen);
-		
-		for (int i = 0; i < pixels.length; i++) { //create the image to be rendered
-			pixels[i] = screen._pixels[i];
-		}
-		
-		Graphics g = bs.getDrawGraphics();
-		
-		g.drawImage(image, 0, 0, getWidth(), getHeight(), null);
-		_board.renderMessages(g);
-		
-		g.dispose(); //release resources
-		bs.show(); //make next buffer visible
-	}
-	
-	private void renderScreen() { //TODO: merge these render methods
+	private void renderGame() {
 		BufferStrategy bs = getBufferStrategy();
 		if(bs == null) {
 			createBufferStrategy(3);
@@ -104,8 +74,32 @@ public class Game extends Canvas {
 		
 		screen.clear();
 		
+		_board.render(screen);
+		
+		for (int i = 0; i < pixels.length; i++) {
+			pixels[i] = screen._pixels[i];
+		}
+		
 		Graphics g = bs.getDrawGraphics();
 		
+		g.drawImage(image, 0, 0, getWidth(), getHeight(), null);
+		_board.renderMessages(g);
+		
+		g.dispose();
+		bs.show();
+	}
+	
+	private void renderScreen() {
+		BufferStrategy bs = getBufferStrategy();
+		if(bs == null) {
+			createBufferStrategy(3);
+			return;
+		}
+		
+		screen.clear();
+
+		Graphics g = bs.getDrawGraphics();
+
 		_board.drawScreen(g);
 
 		g.dispose();
@@ -122,7 +116,7 @@ public class Game extends Canvas {
 		
 		long  lastTime = System.nanoTime();
 		long timer = System.currentTimeMillis();
-		final double ns = 1000000000.0 / 60.0; //nanosecond, 60 frames per second
+		final double ns = 1000000000.0 / 60.0; //nanosecond, 60 fps
 		double delta = 0;
 		int frames = 0;
 		int updates = 0;
@@ -138,7 +132,7 @@ public class Game extends Canvas {
 			}
 			
 			if(_paused) {
-				if(_screenDelay <= 0) { //time passed? lets reset status to show the game
+				if(_screenDelay <= 0) {
 					_board.setShow(-1);
 					_paused = false;
 				}
@@ -146,10 +140,9 @@ public class Game extends Canvas {
 			} else {
 				renderGame();
 			}
-				
-			
+
 			frames++;
-			if(System.currentTimeMillis() - timer > 1000) { //once per second
+			if(System.currentTimeMillis() - timer > 1000) {
 				_frame.setTime(_board.subtractTime());
 				_frame.setPoints(_board.getPoints());
 				_frame.setLives(_board.getLives());
@@ -164,11 +157,7 @@ public class Game extends Canvas {
 		}
 	}
 	
-	/*
-	|--------------------------------------------------------------------------
-	| Getters & Setters
-	|--------------------------------------------------------------------------
-	 */
+	//getters & setters
 	public static double getPlayerSpeed() {
 		return playerSpeed;
 	}
@@ -192,8 +181,7 @@ public class Game extends Canvas {
 	public static void addBombRate(int i) {
 		bombRate += i;
 	}
-	
-	//screen delay
+
 	public int getScreenDelay() {
 		return _screenDelay;
 	}
@@ -234,5 +222,4 @@ public class Game extends Canvas {
 	public void pause() {
 		_paused = true;
 	}
-	
 }
