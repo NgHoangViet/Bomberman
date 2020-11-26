@@ -1,5 +1,6 @@
 package main.java.bomberman.entities.mob;
 
+import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -7,6 +8,7 @@ import java.util.List;
 import main.java.bomberman.Board;
 import main.java.bomberman.Game;
 import main.java.bomberman.entities.Entity;
+import main.java.bomberman.entities.Message;
 import main.java.bomberman.entities.bomb.Bomb;
 import main.java.bomberman.entities.bomb.DirectionalExplosion;
 import main.java.bomberman.entities.mob.enemy.Enemy;
@@ -21,7 +23,7 @@ public class Player extends Mob {
 	private List<Bomb> _bombs;
 	protected Keyboard _input;
 	
-	protected int _timeBetweenPutBombs = 1;
+	protected int _timeBetweenPutBombs = 0;
 	
 	public static List<Powerup> _powerups = new ArrayList<Powerup>();
 	
@@ -222,7 +224,22 @@ public class Player extends Mob {
 		
 		p.setValues();
 	}
-
+	
+	public void clearUsedPowerups() {
+		Powerup p;
+		for (int i = 0; i < _powerups.size(); i++) {
+			p = _powerups.get(i);
+			if(p.isActive() == false)
+				_powerups.remove(i);
+		}
+	}
+	
+	public void removePowerups() {
+		for (int i = 0; i < _powerups.size(); i++) {
+				_powerups.remove(i);
+		}
+	}
+	
 	/*
 	|--------------------------------------------------------------------------
 	| Mob Sprite

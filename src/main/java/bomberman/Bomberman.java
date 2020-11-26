@@ -6,6 +6,6 @@ import main.java.bomberman.gui.Frame;
 public class Bomberman {
 	
 	public static void main(String[] args) throws BombermanException {
-		new Frame();
+		Frame mainwindow = new Frame();
 	}
 }

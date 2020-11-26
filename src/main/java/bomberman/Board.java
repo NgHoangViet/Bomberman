@@ -29,16 +29,16 @@ public class Board implements IRender {
 	protected Screen _screen;
 	
 	public Entity[] _entities;
-	public List<Mob> _mobs = new ArrayList<>();
-	protected List<Bomb> _bombs = new ArrayList<>();
-	private List<Message> _messages = new ArrayList<>();
+	public List<Mob> _mobs = new ArrayList<Mob>();
+	protected List<Bomb> _bombs = new ArrayList<Bomb>();
+	private List<Message> _messages = new ArrayList<Message>();
 	
-	private int _screenToShow = -1; //1: endgame, 2: changelevel, 3: paused
+	private int _screenToShow = -1; //1:endgame, 2:changelevel, 3:paused
 	
 	private int _time = Game.TIME;
 	private int _points = Game.POINTS;
 	private int _lives = Game.LIVES;
-
+	
 	public Board(Game game, Keyboard input, Screen screen) {
 		_game = game;
 		_input = input;
@@ -46,7 +46,7 @@ public class Board implements IRender {
 		
 		changeLevel(1); //start in level 1
 	}
-
+	
 	/*
 	|--------------------------------------------------------------------------
 	| Render & Update
@@ -64,7 +64,7 @@ public class Board implements IRender {
 		
 		for (int i = 0; i < _mobs.size(); i++) {
 			Mob a = _mobs.get(i);
-			if(a.isRemoved()) _mobs.remove(i);
+			if(((Entity)a).isRemoved()) _mobs.remove(i);
 		}
 	}
 
@@ -72,11 +72,12 @@ public class Board implements IRender {
 	@Override
 	public void render(Screen screen) {
 		if( _game.isPaused() ) return;
-
-		int x0 = Screen.xOffset >> 4;
-		int x1 = (Screen.xOffset + screen.getWidth() + Game.TILES_SIZE) / Game.TILES_SIZE;
+		
+		//only render the visible part of screen
+		int x0 = Screen.xOffset >> 4; //tile precision, -> left X
+		int x1 = (Screen.xOffset + screen.getWidth() + Game.TILES_SIZE) / Game.TILES_SIZE; // -> right X
 		int y0 = Screen.yOffset >> 4;
-		int y1 = (Screen.yOffset + screen.getHeight()) / Game.TILES_SIZE;
+		int y1 = (Screen.yOffset + screen.getHeight()) / Game.TILES_SIZE; //render one tile plus to fix black margins
 		
 		for (int y = y0; y < y1; y++) {
 			for (int x = x0; x < x1; x++) {
@@ -88,20 +89,26 @@ public class Board implements IRender {
 		renderMobs(screen);
 		
 	}
-
+	
+	/*
+	|--------------------------------------------------------------------------
+	| ChangeLevel
+	|--------------------------------------------------------------------------
+	 */
 	public void newGame() {
 		resetProperties();
 		changeLevel(1);
 	}
-
+	
+	@SuppressWarnings("static-access")
 	private void resetProperties() {
 		_points = Game.POINTS;
 		_lives = Game.LIVES;
 		Player._powerups.clear();
 		
-		Game.playerSpeed = 1.0;
-		Game.bombRadius = 1;
-		Game.bombRate = 1;
+		_game.playerSpeed = 1.0;
+		_game.bombRadius = 1;
+		_game.bombRate = 1;
 		
 	}
 
@@ -148,7 +155,7 @@ public class Board implements IRender {
 		
 		return false;
 	}
-
+	
 	/*
 	|--------------------------------------------------------------------------
 	| Detections
@@ -215,7 +222,7 @@ public class Board implements IRender {
 	
 	/*
 	|--------------------------------------------------------------------------
-	| Getters & Setters
+	| Getters And Setters
 	|--------------------------------------------------------------------------
 	 */
 	public Entity getEntity(double x, double y, Mob m) {
@@ -314,16 +321,16 @@ public class Board implements IRender {
 		
 		return null;
 	}
-
-	/*
-	|--------------------------------------------------------------------------
-	| Getters & Setters
-	|--------------------------------------------------------------------------
-	 */
+	
 	public Entity getEntityAt(double x, double y) {
 		return _entities[(int)x + (int)y * _level.getWidth()];
 	}
-
+	
+	/*
+	|--------------------------------------------------------------------------
+	| Adds and Removes
+	|--------------------------------------------------------------------------
+	 */
 	public void addEntitie(int pos, Entity e) {
 		_entities[pos] = e;
 	}
@@ -338,61 +345,6 @@ public class Board implements IRender {
 	
 	public void addMessage(Message e) {
 		_messages.add(e);
-	}
-
-	public Keyboard getInput() {
-		return _input;
-	}
-
-	public Level getLevel() {
-		return _level;
-	}
-
-	public Game getGame() {
-		return _game;
-	}
-
-	public int getShow() {
-		return _screenToShow;
-	}
-
-	public void setShow(int i) {
-		_screenToShow = i;
-	}
-
-	public int getTime() {
-		return _time;
-	}
-
-	public int getLives() {
-		return _lives;
-	}
-
-	public int subtractTime() {
-		if(_game.isPaused())
-			return this._time;
-		else
-			return this._time--;
-	}
-
-	public int getPoints() {
-		return _points;
-	}
-
-	public void addPoints(int points) {
-		this._points += points;
-	}
-
-	public void addLives(int lives) {
-		this._lives += lives;
-	}
-
-	public int getWidth() {
-		return _level.getWidth();
-	}
-
-	public int getHeight() {
-		return _level.getHeight();
 	}
 	
 	/*
@@ -473,4 +425,65 @@ public class Board implements IRender {
 				_messages.remove(i);
 		}
 	}
+	
+	/*
+	|--------------------------------------------------------------------------
+	| Getters & Setters
+	|--------------------------------------------------------------------------
+	 */
+	public Keyboard getInput() {
+		return _input;
+	}
+	
+	public Level getLevel() {
+		return _level;
+	}
+	
+	public Game getGame() {
+		return _game;
+	}
+	
+	public int getShow() {
+		return _screenToShow;
+	}
+	
+	public void setShow(int i) {
+		_screenToShow = i;
+	}
+	
+	public int getTime() {
+		return _time;
+	}
+	
+	public int getLives() {
+		return _lives;
+	}
+
+	public int subtractTime() {
+		if(_game.isPaused())
+			return this._time;
+		else
+			return this._time--;
+	}
+
+	public int getPoints() {
+		return _points;
+	}
+
+	public void addPoints(int points) {
+		this._points += points;
+	}
+
+	public void addLives(int lives) {
+		this._lives += lives;
+	}
+	
+	public int getWidth() {
+		return _level.getWidth();
+	}
+
+	public int getHeight() {
+		return _level.getHeight();
+	}
+	
 }

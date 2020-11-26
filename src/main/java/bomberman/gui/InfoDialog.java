@@ -28,7 +28,10 @@ public class InfoDialog implements WindowListener {
 	        });  
 	        
 	        JButton[] buttons = { button };  
-	        JOptionPane optionPane = new JOptionPane(message, option, 0, null, buttons, button);
+	        JOptionPane optionPane = new JOptionPane(  
+	                                                 message,  
+	                                                 option,  
+	                                                 0, null, buttons, button);  
 	        dialog.getContentPane().add(optionPane);  
 	        dialog.setSize(500,300);  
 	        dialog.setLocationRelativeTo(f);  
