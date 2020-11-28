@@ -8,9 +8,7 @@ public class Sprite {
 	protected int _realWidth;
 	protected int _realHeight;
 	private SpriteSheet _sheet;
-	
-	public static Sprite voidSprite = new Sprite(16, 0xffffff); //black
-	
+
 	/*
 	|--------------------------------------------------------------------------
 	| Board sprites
