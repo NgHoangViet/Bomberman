@@ -14,7 +14,6 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class CodeDialog implements WindowListener, ActionListener {
-
 	private Frame _frame;
 	private JFrame _dialog;
 	private JTextField _code;
@@ -28,7 +27,7 @@ public class CodeDialog implements WindowListener, ActionListener {
 		button.addActionListener(this);
 
 		JPanel pane = new JPanel(new BorderLayout());
-		_code = new JTextField("code");
+		_code = new JTextField("");
 
 		pane.add(new JLabel("Code: "), BorderLayout.WEST);
 		pane.add(_code, BorderLayout.CENTER);
@@ -82,10 +81,8 @@ public class CodeDialog implements WindowListener, ActionListener {
 			_valid = true;
 			_dialog.dispose();
 		} else {
-			JOptionPane.showMessageDialog(_frame,
-				    "That code isnt correct...",
-				    "Error",
-				    JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(_frame, "That code isnt correct...",
+				    						"Error", JOptionPane.ERROR_MESSAGE);
 		}
 		
 	}
