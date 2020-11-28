@@ -1,7 +1,6 @@
 package main.java.bomberman.gui;
 
 import java.awt.BorderLayout;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
@@ -9,7 +8,6 @@ import main.java.bomberman.Game;
 import main.java.bomberman.gui.menu.Menu;
 
 public class Frame extends JFrame {
-	
 	public GamePanel _gamepane;
 	private JPanel _containerpane;
 	private InfoPanel _infopanel;

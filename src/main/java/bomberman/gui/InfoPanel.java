@@ -3,14 +3,12 @@ package main.java.bomberman.gui;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridLayout;
-
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import main.java.bomberman.Game;
 
 public class InfoPanel extends JPanel {
-	
 	private JLabel timeLabel;
 	private JLabel pointsLabel;
 	private JLabel livesLabel;
@@ -33,8 +31,7 @@ public class InfoPanel extends JPanel {
 		add(timeLabel);
 		add(pointsLabel);
 		add(livesLabel);
-		
-		
+
 		setBackground(Color.black);
 		setPreferredSize(new Dimension(0, 40));
 	}
@@ -45,7 +42,6 @@ public class InfoPanel extends JPanel {
 
 	public void setLives(int t) {
 		livesLabel.setText("Lives: " + t);
-		
 	}
 
 	public void setPoints(int t) {

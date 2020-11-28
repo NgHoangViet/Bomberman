@@ -16,7 +16,6 @@ import main.java.bomberman.gui.Frame;
 import main.java.bomberman.Game;
 
 public class Options extends JMenu implements ChangeListener {
-
 	Frame _frame;
 	
 	public Options(Frame frame) {
@@ -38,10 +37,8 @@ public class Options extends JMenu implements ChangeListener {
 		
 		add(new JLabel("Size: "));
 		
-		JSlider sizeRange = new JSlider(JSlider.HORIZONTAL,
-                1, 5, 3);
-		
-		//Turn on labels at major tick marks.
+		JSlider sizeRange = new JSlider(JSlider.HORIZONTAL, 1, 5, 3);
+
 		sizeRange.setMajorTickSpacing(2);
 		sizeRange.setMinorTickSpacing(1);
 		sizeRange.setPaintTicks(true);
@@ -62,8 +59,8 @@ public class Options extends JMenu implements ChangeListener {
 	        System.out.println( Game.SCALE);
 	        
 	        _frame._gamepane.changeSize();
-			  _frame.revalidate();
-			  _frame.pack();
+	        _frame.revalidate();
+	        _frame.pack();
 	    }
 	}
 	
@@ -73,9 +70,8 @@ public class Options extends JMenu implements ChangeListener {
 			_frame = frame;
 		}
 		
-		  @Override
+		@Override
 		public void actionPerformed(ActionEvent e) {
-			  
 			  if(e.getActionCommand().equals("Pause")) {
 				  _frame.pauseGame();
 			  }

@@ -9,24 +9,17 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 
 public class Game extends JMenu {
-
 	public Frame frame;
 	
 	public Game(Frame frame) {
 		super("Game");
 		this.frame = frame;
-		
-		/*
-		 * New Game
-		 */
+
 		JMenuItem newgame = new JMenuItem("New Game");
 		newgame.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_N, ActionEvent.CTRL_MASK));
 		newgame.addActionListener(new MenuActionListener(frame));
 		add(newgame);
-		
-		/*
-		 * Codes
-		 */
+
 		JMenuItem codes = new JMenuItem("Codes");
 		codes.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_C, ActionEvent.CTRL_MASK));
 		codes.addActionListener(new MenuActionListener(frame));
@@ -39,9 +32,8 @@ public class Game extends JMenu {
 			_frame = frame;
 		}
 		
-		  @Override
+		@Override
 		public void actionPerformed(ActionEvent e) {
-			  
 			  if(e.getActionCommand().equals("New Game")) {
 				  _frame.newGame();
 			  }
@@ -49,8 +41,6 @@ public class Game extends JMenu {
 			  if(e.getActionCommand().equals("Codes")) {
 				  new CodeDialog(_frame);
 			  }
-
-		  }
 		}
-
+	}
 }

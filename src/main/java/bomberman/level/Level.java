@@ -3,13 +3,14 @@ package main.java.bomberman.level;
 import main.java.bomberman.Board;
 import main.java.bomberman.exceptions.LoadLevelException;
 
-public abstract class Level implements ILevel {
+public abstract class Level {
 
 	protected int _width, _height, _level;
 	protected String[] _lineTiles;
 	protected Board _board;
 
-	protected static String[] codes = { //TODO: change this code system to actually load the code from each level.txt
+	//code để chuyển lv
+	protected static String[] codes = {
 		"lv1",
 		"lv2",
 		"lv3",
@@ -22,11 +23,11 @@ public abstract class Level implements ILevel {
 		_board = board;
 	}
 
-	@Override
 	public abstract void loadLevel(String path) throws LoadLevelException;
 	
 	public abstract void createEntities();
 
+	//kiểm tra code
 	public int validCode(String str) {
 		for (int i = 0; i < codes.length; i++) {
 			if (codes[i].equals(str)) {
