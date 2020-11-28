@@ -13,7 +13,7 @@ import main.java.bomberman.entities.mob.Player;
 public class Screen {
 	protected int _width, _height;
 	public int[] _pixels;
-	private int _transparentColor = 0xffff00ff; //pink with alpha channel (ff in the begining)
+	private int _transparentColor = 0xffff00ff;//nền
 	
 	public static int xOffset = 0, yOffset = 0;
 	
@@ -31,14 +31,14 @@ public class Screen {
 		}
 	}
 	
-	public void renderEntity(int xp, int yp, Entity entity) { //save entity pixels
+	public void renderEntity(int xp, int yp, Entity entity) {
 		xp -= xOffset;
 		yp -= yOffset;
 		for (int y = 0; y < entity.getSprite().getSize(); y++) {
-			int ya = y + yp; //add offset
+			int ya = y + yp;
 			for (int x = 0; x < entity.getSprite().getSize(); x++) {
-				int xa = x + xp; //add offset
-				if(xa < -entity.getSprite().getSize() || xa >= _width || ya < 0 || ya >= _height) break; //fix black margins
+				int xa = x + xp;
+				if(xa < -entity.getSprite().getSize() || xa >= _width || ya < 0 || ya >= _height) break;
 				if(xa < 0) xa = 0; //start at 0 from left
 				int color = entity.getSprite().getPixel(x + y * entity.getSprite().getSize());
 				if(color != _transparentColor) _pixels[xa + ya * _width] = color;
@@ -53,7 +53,7 @@ public class Screen {
 			int ya = y + yp;
 			for (int x = 0; x < entity.getSprite().getSize(); x++) {
 				int xa = x + xp;
-				if(xa < -entity.getSprite().getSize() || xa >= _width || ya < 0 || ya >= _height) break; //fix black margins
+				if(xa < -entity.getSprite().getSize() || xa >= _width || ya < 0 || ya >= _height) break;
 				if(xa < 0) xa = 0;
 				int color = entity.getSprite().getPixel(x + y * entity.getSprite().getSize());
 				if(color != _transparentColor) 
@@ -85,11 +85,7 @@ public class Screen {
 		return temp;
 	}
 	
-	/*
-	|--------------------------------------------------------------------------
-	| Game Screens
-	|--------------------------------------------------------------------------
-	 */
+	//Screens
 	public void drawEndGame(Graphics g, int points, String code) {
 		g.setColor(Color.black);
 		g.fillRect(0, 0, getRealWidth(), getRealHeight());
@@ -125,13 +121,11 @@ public class Screen {
 	public void drawPaused(Graphics g) {
 		Font font = new Font("Arial", Font.PLAIN, 20 * Game.SCALE);
 		g.setFont(font);
-		g.setColor(Color.white);
+		g.setColor(Color.black);
 		drawCenteredString("PAUSED", getRealWidth(), getRealHeight(), g);
 		
 	}
-	
-	
-	
+
 	public void drawCenteredString(String s, int w, int h, Graphics g) {
 	    FontMetrics fm = g.getFontMetrics();
 	    int x = (w - fm.stringWidth(s)) / 2;
