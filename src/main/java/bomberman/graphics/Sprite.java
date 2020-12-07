@@ -11,7 +11,7 @@ public class Sprite {
 
 	/*
 	|--------------------------------------------------------------------------
-	| Board sprites
+	| Board
 	|--------------------------------------------------------------------------
 	 */
 	public static Sprite grass = new Sprite(16, 6, 0, SpriteSheet.tiles, 16, 16);
@@ -21,7 +21,7 @@ public class Sprite {
 	
 	/*
 	|--------------------------------------------------------------------------
-	| Player Sprites
+	| Player
 	|--------------------------------------------------------------------------
 	 */
 	public static Sprite player_up = new Sprite(16, 0, 0, SpriteSheet.tiles, 12, 16);
@@ -121,7 +121,7 @@ public class Sprite {
 	
 	/*
 	|--------------------------------------------------------------------------
-	| Explosion Sprites
+	| Bomb Explosion
 	|--------------------------------------------------------------------------
 	 */
 	public static Sprite bomb_exploded = new Sprite(16, 0, 4, SpriteSheet.tiles, 16, 16);
