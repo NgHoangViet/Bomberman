@@ -13,7 +13,7 @@ import main.java.bomberman.entities.mob.Player;
 public class Screen {
 	protected int _width, _height;
 	public int[] _pixels;
-	private int _transparentColor = 0xffff00ff;//nền
+	private int _transparentColor = 0xffff00ff;//nền hồng
 	
 	public static int xOffset = 0, yOffset = 0;
 	
