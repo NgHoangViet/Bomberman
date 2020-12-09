@@ -7,7 +7,7 @@ import main.java.bomberman.graphics.Sprite;
 
 public class DestroyableTile extends Tile {
 
-	private final int MAX_ANIMATE = 7500; //save the animation status and dont let this get too big
+	private final int MAX_ANIMATE = 7500;
 	private int _animate = 0;
 	protected boolean _destroyed = false;
 	protected int _timeToDisapear = 20;
@@ -20,7 +20,7 @@ public class DestroyableTile extends Tile {
 	@Override
 	public void update() {
 		if(_destroyed) {
-			if(_animate < MAX_ANIMATE) _animate++; else _animate = 0; //reset animation
+			if(_animate < MAX_ANIMATE) _animate++; else _animate = 0;
 			if(_timeToDisapear > 0) 
 				_timeToDisapear--;
 			else

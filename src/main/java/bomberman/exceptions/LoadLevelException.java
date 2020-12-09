@@ -1,5 +1,7 @@
 package main.java.bomberman.exceptions;
 
+//SỬA CMT VS LÀM SẠCH CODE
+//SỬA TỪ EXCEPTIONS LÊN
 public class LoadLevelException extends BombermanException {
 	public LoadLevelException() {
 	}

@@ -12,10 +12,10 @@ public class Message extends Entity {
 	protected int _size;
 	
 	public Message(String message, double x, double y, int duration, Color color, int size) {
-		_x =x;
+		_x = x;
 		_y = y;
 		_message = message;
-		_duration = duration * 60; //seconds
+		_duration = duration * 60; // giây
 		_color = color;
 		_size = size;
 	}
