@@ -40,10 +40,10 @@ public abstract class Entity implements IRender {
 	}
 	
 	public int getXTile() {
-		return Coordinates.pixelToTile(_x + _sprite.SIZE / 2); //plus half block for precision
+		return Coordinates.pixelToTile(_x + _sprite.SIZE / 2);
 	}
 	
 	public int getYTile() {
-		return Coordinates.pixelToTile(_y - _sprite.SIZE / 2); //plus half block
+		return Coordinates.pixelToTile(_y - _sprite.SIZE / 2);
 	}
 }
