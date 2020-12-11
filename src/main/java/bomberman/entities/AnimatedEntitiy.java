@@ -1,7 +1,6 @@
 package main.java.bomberman.entities;
 
 public abstract class AnimatedEntitiy extends Entity {
-
 	protected int _animate = 0;
 	protected final int MAX_ANIMATE = 7500;
 	

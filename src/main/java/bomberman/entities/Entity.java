@@ -6,7 +6,6 @@ import main.java.bomberman.graphics.Sprite;
 import main.java.bomberman.level.Coordinates;
 
 public abstract class Entity implements IRender {
-
 	protected double _x, _y;
 	protected boolean _removed = false;
 	protected Sprite _sprite;
