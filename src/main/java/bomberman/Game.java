@@ -22,7 +22,7 @@ public class Game extends Canvas {
 	
 	public static final String TITLE = "Bomberman ";
 	
-	//Chỉ số hằng
+	//Chỉ số khởi đầu
 	private static final int BOMBRATE = 8;
 	private static final int BOMBRADIUS = 8;
 	private static final double PLAYERSPEED = 1.5;

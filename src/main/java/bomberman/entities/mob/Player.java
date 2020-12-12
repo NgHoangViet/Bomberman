@@ -1,5 +1,6 @@
 package main.java.bomberman.entities.mob;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -7,6 +8,7 @@ import java.util.List;
 import main.java.bomberman.Board;
 import main.java.bomberman.Game;
 import main.java.bomberman.entities.Entity;
+import main.java.bomberman.entities.Message;
 import main.java.bomberman.entities.bomb.Bomb;
 import main.java.bomberman.entities.bomb.DirectionalExplosion;
 import main.java.bomberman.entities.mob.enemy.Enemy;
@@ -118,28 +120,28 @@ public class Player extends Mob {
 	 */
 	@Override
 	public void kill() {
-//		if(!_alive) return;
-//
-//		_alive = false;
-//
-//		_board.addLives(-1);
-//
-//		Message msg = new Message("-1 LIVE", getXMessage(), getYMessage(), 2, Color.white, 14);
-//		_board.addMessage(msg);
+		if(!_alive) return;
+
+		_alive = false;
+
+		_board.addLives(-1);
+
+		Message msg = new Message("-1 LIVE", getXMessage(), getYMessage(), 2, Color.white, 14);
+		_board.addMessage(msg);
 	}
 	
 	@Override
 	protected void afterKill() {
-//		if(_timeAfter > 0) --_timeAfter;
-//		else {
-//			if(_bombs.size() == 0) {
-//
-//				if(_board.getLives() == 0)
-//					_board.endGame();
-//				else
-//					_board.restartLevel();
-//			}
-//		}
+		if(_timeAfter > 0) --_timeAfter;
+		else {
+			if(_bombs.size() == 0) {
+
+				if(_board.getLives() == 0)
+					_board.endGame();
+				else
+					_board.restartLevel();
+			}
+		}
 	}
 	
 	/*
