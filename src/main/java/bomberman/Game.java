@@ -15,14 +15,14 @@ public class Game extends Canvas {
 	
 	//Khung giao diện
 	public static final int TILES_SIZE = 16,
-							WIDTH = TILES_SIZE * (int)(31 / 2), //minus one to ajust the window,
+							WIDTH = TILES_SIZE * (31 / 2),
 							HEIGHT = 13 * TILES_SIZE;
 
 	public static int SCALE = 3;
 	
 	public static final String TITLE = "Bomberman ";
 	
-	//Chỉ số hằng
+	//Chỉ số khởi đầu
 	private static final int BOMBRATE = 8;
 	private static final int BOMBRADIUS = 8;
 	private static final double PLAYERSPEED = 1.5;
